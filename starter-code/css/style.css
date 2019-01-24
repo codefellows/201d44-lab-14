@@ -1,1 +1,51 @@
 /* TODO: Make it awesome */
+*{
+    background: blue;
+    color: bisque;
+}
+
+#catTitle {
+    width: 960px;
+    height: 100px;
+    margin: 0px auto;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 20px groove grey;
+    font-size: 60px;
+    font-family: 'Yellowtail', cursive;
+    text-decoration: underline;
+    color: goldenrod;
+
+}
+
+.catHome {
+    width: 960px;
+    height: 100px;
+    margin: 0px auto;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    border: 10px ridge rgb(92, 0, 0);
+    
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#homeBut{
+  
+    
+}
+#cartBut{
+    
+}
+button:hover{
+    background: #2db34a;
+    border-radius: 6px;
+    cursor: crosshair;
+    height: auto;
+    line-height: 20px;
+    text-align: center;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
