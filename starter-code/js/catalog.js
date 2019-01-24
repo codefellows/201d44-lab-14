@@ -12,7 +12,9 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
-
+    var optionEl = document.createElement('option');
+    optionEl.textContent = Product.allProducts[i].name;
+    selectElement.appendChild(optionEl);
   }
 
 }
@@ -34,9 +36,14 @@ function handleSubmit(event) {
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
+  event.preventDefault();
+  var selectedItem = event.target.items.value;
+  var selectedQty = event.target.quantity.value;
+   new CartItem (selectedItem, selectedQty);
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  console.table(CartItem.cartContents);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
@@ -52,6 +59,7 @@ function updateCartPreview() {
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
 var catalogForm = document.getElementById('catalog');
+// var itemsForm = document.getElementById('quantity');
 catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select

@@ -3,7 +3,7 @@
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
-  this.items = items;
+
 };
 
 Cart.prototype.addItem = function(product, quantity) {
@@ -22,8 +22,9 @@ Cart.prototype.removeItem = function(item) {
 var CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
+  CartItem.cartContents.push(this);
 };
-
+CartItem.cartContents = [];
 // Product contructor.
 var Product = function(filePath, name) {
   this.filePath = filePath;
