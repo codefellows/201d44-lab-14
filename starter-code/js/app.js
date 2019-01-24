@@ -16,7 +16,7 @@ function loadCart() {
   }
 }
 
-Cart.prototype.include = function(product){
+Cart.prototype.includes = function(product){
   for(var i=0; i<cart.items.length; i++) {
     if(cart.items[i].name === product.name) {
       return i;
@@ -35,13 +35,13 @@ Cart.prototype.addItem = function(product, quantity) {
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart.items));
 };
 
 Cart.prototype.removeItem = function(product) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
-  var index = cart.include(product);
+  var index = cart.includes(product);
 
   if(index) {
     cart.items.splice(index,1);
