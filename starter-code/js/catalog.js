@@ -21,6 +21,9 @@ function populateForm() {
     selectElement.appendChild(optEl);
   }
 
+  updateCounter();
+  updateCartPreview();
+
 }
 
 // When someone submits the form, we need to add the selected item to the cart
