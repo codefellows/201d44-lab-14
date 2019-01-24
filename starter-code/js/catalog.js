@@ -2,6 +2,9 @@
 
 'use strict';
 
+var select = document.getElementById('items');
+var cartContents = document.getElementById('cartContents');
+
 // Set up an empty cart for use on this page.
 loadCart();
 
@@ -13,7 +16,8 @@ function populateForm() {
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
     var optEl = document.createElement('option');
-    optEl.textContent = allProducts[i].name;
+    optEl.textContent = Product.allProducts[i].name;
+    optEl.value = Product.allProducts[i].name;
     selectElement.appendChild(optEl);
   }
 
@@ -25,6 +29,7 @@ function populateForm() {
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
+  event.preventDefault();
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -39,15 +44,57 @@ function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  // pull item name from select menu
+  var itemName = select.options[select.selectedIndex].value;
+  var itemQuantity = document.getElementById('quantity').value;
+  var product;
+
+  //search product list for product with that name
+  for(var i=0; i<Product.allProducts.length; i++) {
+    if(Product.allProducts[i].name === itemName) {
+      product = Product.allProducts[i];
+      break;
+    }
+  }
+  cart.addItem(product, itemQuantity);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var countHolder = document.getElementById('itemCount');
+  countHolder.textContent = cart.items.length;
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
+  
+  var prodTab = document.createElement('table');
+  cartContents.appendChild(prodTab);
+
+  var header = document.createElement('tr');
+  var data = document.createElement('th');
+  data.textContent = 'Quantity';
+  header.appendChild(data);
+  data = document.createElement('th');
+  data.textContent = 'Item';
+  header.appendChild(data);
+  prodTab.appendChild(header);
+
+  for(var i=0; i<cart.items.length; i++) {
+    var row = document.createElement('tr');
+
+    data = document.createElement('td');
+    data.textContent = cart.items[i].quantity;
+    row.appendChild(data);
+
+    data = document.createElement('td');
+    data.textContent = cart.items[i].product.name;
+    row.appendChild(data);
+
+    prodTab.appendChild(row);
+  }
 }
 
 // Set up the "submit" event listener on the form.
