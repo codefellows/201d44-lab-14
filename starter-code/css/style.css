@@ -1,1 +1,50 @@
-/* TODO: Make it awesome */
+body{
+    background: #d6ece9;
+}
+h1{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+nav li{
+    background-color: antiquewhite;
+
+}
+nav li:hover{
+     background-color: black;
+     
+
+}
+div li{
+    /* float: left;
+	height: 100px;
+	width: 350px;
+	margin: 20px;
+	padding: 10px;
+	border: solid;
+	border-radius: 10px;
+    background: rgb(250, 249, 249); */
+    font-size: 20px;
+    text-align: center;
+}
+fieldset{
+    font-size: 18px;
+}
+select:hover{
+    background-color: bisque;
+}
+input {
+    background-color: black;
+    color: white;
+}
+input:hover{
+   background-color: red;
+}
+p{
+   position:fixed;
+   text-align: center;
+   bottom:3px;
+   height:30px;
+   width: 100%;
+   background:#999;
+}
