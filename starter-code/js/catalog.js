@@ -3,7 +3,7 @@
 'use strict';
 
 // Set up an empty cart for use on this page.
-var cart = new Cart([]);
+loadCart();
 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
@@ -12,7 +12,9 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
-
+    var optEl = document.createElement('option');
+    optEl.textContent = allProducts[i].name;
+    selectElement.appendChild(optEl);
   }
 
 }
