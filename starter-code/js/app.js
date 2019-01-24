@@ -18,7 +18,7 @@ function loadCart() {
 
 Cart.prototype.includes = function(product){
   for(var i=0; i<cart.items.length; i++) {
-    if(cart.items[i].name === product.name) {
+    if(cart.items[i].product.name === product.name) {
       return i;
     }
   }
@@ -27,7 +27,7 @@ Cart.prototype.includes = function(product){
 
 Cart.prototype.addItem = function(product, quantity) {
   if(cart.includes(product)!= -1) {
-    cart.items[cart.includes(product)] += quantity;
+    cart.items[cart.includes(product)].quantity += quantity;
   } else {
     this.items.push(new CartItem(product, quantity))
   }
@@ -42,10 +42,7 @@ Cart.prototype.removeItem = function(product) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
   var index = cart.includes(product);
-
-  if(index) {
     cart.items.splice(index,1);
-  }
 };
 
 var CartItem = function(product, quantity) {
