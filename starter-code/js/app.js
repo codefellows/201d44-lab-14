@@ -2,8 +2,8 @@
 
 
 var items =[];
-var product = document.getElementById('item');
-var quantity =document.getElementById('quantity');
+var productInput = document.getElementById('item');
+var quantityInput =document.getElementById('quantity');
 
 
 // Cart constructor.
@@ -14,12 +14,17 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-  new CartItem (product, quantity)
+  
+  new CartItem (product, quantity);
+  
+  
   
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  localStorage.setItem('productItems', JSON.stringify(items));
+  
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -30,6 +35,7 @@ Cart.prototype.removeItem = function(item) {
 var CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
+  items.push(this);
 };
 
 // Product contructor.
