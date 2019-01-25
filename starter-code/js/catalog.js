@@ -60,6 +60,8 @@ function addSelectedItemToCart() {
     }
   }
   cart.addItem(product, itemQuantity);
+
+  document.getElementById('quantity').value = '';
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart

@@ -61,6 +61,7 @@ p{
    height:30px;
    width: 100%;
    background:#999;
+
    
 }
  nav div {
@@ -69,6 +70,7 @@ p{
     padding: 10px;
     text-align: center;
     color: #db6a2d;
+
 }
 
 img {
@@ -82,10 +84,12 @@ table button{
 
 table, th, td{
   border: 2px solid black;
+
   background-color: white;
   font-size: 20px;
   width: 300px;
   margin: 0 auto;
+
 }
 
 fieldset label {
@@ -94,6 +98,7 @@ fieldset label {
 
 .card fieldset label {
   display: inline;
+
 }
 fieldset{
     margin: 20px;
@@ -101,3 +106,6 @@ fieldset{
 table{
     display: block;
 }
+
+
+
