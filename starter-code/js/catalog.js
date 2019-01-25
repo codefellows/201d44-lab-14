@@ -25,7 +25,7 @@ function populateForm() {
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
-
+  event.preventDefault();
   // Do all the things ...
   addSelectedItemToCart();
   cart.saveToLocalStorage();
@@ -36,7 +36,6 @@ function handleSubmit(event) {
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  event.preventDefault();
   var selectedItem = event.target.items.value;
   var selectedQty = event.target.quantity.value;
   new CartItem (selectedItem, selectedQty);
@@ -51,7 +50,7 @@ function updateCounter() {}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // TODO: Get the item and quantity from the form
+  // TODO: Get the item and quanti    ty from the form
   // TODO: Add a new element to the cartContents div with that information
 }
 
