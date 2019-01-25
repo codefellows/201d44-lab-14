@@ -1,4 +1,5 @@
 'use strict';
+var cart;
 
 // Cart constructor.
 var Cart = function(items) {
@@ -7,6 +8,7 @@ var Cart = function(items) {
 };
 
 Cart.prototype.addItem = function(product, quantity) {
+  for (var i= 0; i< items , length; i++);
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
 };
 
@@ -22,8 +24,9 @@ Cart.prototype.removeItem = function(item) {
 var CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
+  CartItem.cartContents.push(this);
 };
-
+CartItem.cartContents = [];
 // Product contructor.
 var Product = function(filePath, name) {
   this.filePath = filePath;
