@@ -1,50 +1,75 @@
 body{
-    background: #d6ece9;
+    background: #1e2c34;
 }
 h1{
     font-size: 45px;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #db6a2d;
 }
 nav li{
-    background-color: antiquewhite;
-
+    background-color:#24626f ;
+    float: right;
+    font-size: 25px;
+    color: #db6a2d;
+}
+li:nth-of-type(1){
+    float: left;
+    padding-right: 10px;
+    color: #db6a2d;
 }
 nav li:hover{
-     background-color: black;
+     background-color: #fcf9e5;
      
 
 }
 div li{
-    /* float: left;
-	height: 100px;
-	width: 350px;
-	margin: 20px;
-	padding: 10px;
-	border: solid;
-	border-radius: 10px;
-    background: rgb(250, 249, 249); */
     font-size: 20px;
     text-align: center;
 }
 fieldset{
     font-size: 18px;
+    color: #db6a2d;
+    text-align: center;
 }
 select:hover{
-    background-color: bisque;
+    background-color: #fcf9e5;
 }
 input {
-    background-color: black;
-    color: white;
+    background-color: #24626f;
+    color: #db6a2d;
+    
 }
 input:hover{
-   background-color: red;
+   background-color: #fcf9e5;
 }
 p{
+    font-size: 20px;
+    width: 400px;
+    border: 2px solid #fcf9e5;
+    padding: 10px;
+    text-align: center;
+    color: #fcf9e5;
+    margin: auto;
+    
+
+}
+ footer p{
    position:fixed;
    text-align: center;
    bottom:3px;
    height:30px;
    width: 100%;
    background:#999;
+   
+}
+table{
+    margin-left: 45%;
+}
+ nav div {
+    font-size: 25px;
+    border: 2px solid #fcf9e5;
+    padding: 10px;
+    text-align: center;
+    color: #db6a2d;
 }
