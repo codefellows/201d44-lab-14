@@ -48,3 +48,24 @@ p{
    width: 100%;
    background:#999;
 }
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+table button{ 
+  margin-bottom: 10px;
+}
+
+table, th, td{
+  border: 2px solid black;
+}
+
+fieldset label {
+  display: block;
+}
+
+.card fieldset label {
+  display: inline;
+}

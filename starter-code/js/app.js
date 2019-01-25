@@ -9,8 +9,8 @@ var Cart = function(items) {
 
 function loadCart() {
   if(localStorage.getItem('cart')) {
-  var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = new Cart(cartItems);
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = new Cart(cartItems);
   } else {
     cart = new Cart([]);
   }
