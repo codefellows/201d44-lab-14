@@ -1,1 +1,111 @@
-/* TODO: Make it awesome */
+body{
+    background: #1e2c34;
+}
+h1{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #db6a2d;
+}
+nav li,nav li a{
+    background-color:#24626f ;
+    float: right;
+    font-size: 25px;
+    color: #db6a2d;
+}
+li:nth-of-type(1){
+    float: left;
+    padding-right: 10px;
+    color: #db6a2d;
+}
+nav li:hover{
+     background-color: #fcf9e5;
+     
+}
+div li{
+    font-size: 20px;
+    text-align: center;
+    color: #db6a2d;
+}
+fieldset{
+    font-size: 18px;
+    color: #db6a2d;
+    text-align: center;
+}
+select:hover{
+    background-color: #fcf9e5;
+}
+input {
+    background-color: #24626f;
+    color: #db6a2d;
+    
+}
+input:hover{
+   background-color: #fcf9e5;
+}
+p{
+    font-size: 20px;
+    width: 400px;
+    border: 2px solid #fcf9e5;
+    padding: 10px;
+    text-align: center;
+    color: #fcf9e5;
+    margin: auto;
+    
+
+}
+ footer p{
+   position:fixed;
+   text-align: center;
+   bottom:3px;
+   height:30px;
+   width: 100%;
+   background:#999;
+
+   
+}
+ nav div {
+    font-size: 25px;
+    border: 2px solid #fcf9e5;
+    padding: 10px;
+    text-align: center;
+    color: #db6a2d;
+
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+table button{ 
+  margin-bottom: 10px;
+}
+
+table, th, td{
+  border: 2px solid black;
+
+  background-color: white;
+  font-size: 20px;
+  width: 300px;
+  margin: 0 auto;
+
+}
+
+fieldset label {
+  display: block;
+}
+
+.card fieldset label {
+  display: inline;
+
+}
+fieldset{
+    margin: 20px;
+}
+table{
+    display: block;
+}
+
+
+
