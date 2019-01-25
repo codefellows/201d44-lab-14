@@ -39,11 +39,11 @@ function addSelectedItemToCart() {
   event.preventDefault();
   var selectedItem = event.target.items.value;
   var selectedQty = event.target.quantity.value;
-   new CartItem (selectedItem, selectedQty);
+  new CartItem (selectedItem, selectedQty);
+  console.table(CartItem.cartContents);
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
-  // TODO: using those, add one item to the Cart
-  console.table(CartItem.cartContents);
+  // TODO: using those, add one item to the Cart 
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
